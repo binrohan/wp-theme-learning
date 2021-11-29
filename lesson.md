@@ -1,0 +1,1 @@
+Preview image name: screenshot.png should be 12px x 9px 
