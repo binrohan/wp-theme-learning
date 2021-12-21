@@ -37,10 +37,8 @@ function university_post_types() {
 
   // Professor Post Type
   register_post_type('professor', array(
-    'rewrite' => array('slug' => 'professors'),
     'show_in_rest' => true,
-    'supports' => array('title', 'editor'),
-    'has_archive' => true,
+    'supports' => array('title', 'editor', 'thumbnail'),
     'public' => true,
     'labels' => array(
       'name' => 'Professors',
@@ -49,7 +47,7 @@ function university_post_types() {
       'all_items' => 'All Professors',
       'singular_name' => 'Professor'
     ),
-    'menu_icon' => 'dashicons-user'
+    'menu_icon' => 'dashicons-welcome-learn-more'
   ));
 
   // Campus Post Type
