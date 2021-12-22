@@ -64,8 +64,10 @@ function university_post_types() {
       'all_items' => 'All Campuses',
       'singular_name' => 'Campus'
     ),
-    'menu_icon' => 'dashicons-user'
+    'menu_icon' => 'dashicons-location-alt'
   ));
 }
 
 add_action('init', 'university_post_types');
+
+// http://amazingcollege.local
