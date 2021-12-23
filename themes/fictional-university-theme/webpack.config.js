@@ -82,7 +82,7 @@ if (currentTask == "devFast") {
         If you want the browser to also perform a traditional refresh
         after a save to a JS file you can modify the line directly
         below this comment to look like this instead. I'm using this approach
-        instead of just disabling Hot Module Replacement because this way our
+        instead of just disabling Hot Module Replacement beacuse this way our
         CSS updates can still happen immediately without a page refresh.
 
         If you're using a slower computer and the new bundle is not ready

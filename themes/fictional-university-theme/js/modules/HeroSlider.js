@@ -14,7 +14,7 @@ class HeroSlider {
 
       // Add the dots HTML to the DOM
       document.querySelector(".glide__bullets").insertAdjacentHTML("beforeend", dotHTML)
-      
+
       // Actually initialize the glide / slider script
       var glide = new Glide(".hero-slider", {
         type: "carousel",

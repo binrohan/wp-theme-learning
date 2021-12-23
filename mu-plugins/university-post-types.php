@@ -1,10 +1,28 @@
 <?php
+
 function university_post_types() {
-  // Event Post Type
-  register_post_type('event', array(
-    'rewrite' => array('slug' => 'events'),
+  // Campus Post Type
+  register_post_type('campus', array(
     'show_in_rest' => true,
     'supports' => array('title', 'editor', 'excerpt'),
+    'rewrite' => array('slug' => 'campuses'),
+    'has_archive' => true,
+    'public' => true,
+    'labels' => array(
+      'name' => 'Campuses',
+      'add_new_item' => 'Add New Campus',
+      'edit_item' => 'Edit Campus',
+      'all_items' => 'All Campuses',
+      'singular_name' => 'Campus'
+    ),
+    'menu_icon' => 'dashicons-location-alt'
+  ));
+  
+  // Event Post Type
+  register_post_type('event', array(
+    'show_in_rest' => true,
+    'supports' => array('title', 'editor', 'excerpt'),
+    'rewrite' => array('slug' => 'events'),
     'has_archive' => true,
     'public' => true,
     'labels' => array(
@@ -15,14 +33,13 @@ function university_post_types() {
       'singular_name' => 'Event'
     ),
     'menu_icon' => 'dashicons-calendar'
-    
   ));
 
   // Program Post Type
   register_post_type('program', array(
-    'rewrite' => array('slug' => 'programs'),
     'show_in_rest' => true,
     'supports' => array('title', 'editor'),
+    'rewrite' => array('slug' => 'programs'),
     'has_archive' => true,
     'public' => true,
     'labels' => array(
@@ -49,25 +66,6 @@ function university_post_types() {
     ),
     'menu_icon' => 'dashicons-welcome-learn-more'
   ));
-
-  // Campus Post Type
-  register_post_type('campus', array(
-    'rewrite' => array('slug' => 'Campuses'),
-    'show_in_rest' => true,
-    'supports' => array('title', 'editor'),
-    'has_archive' => true,
-    'public' => true,
-    'labels' => array(
-      'name' => 'Campuses',
-      'add_new_item' => 'Add New Campus',
-      'edit_item' => 'Edit Campus',
-      'all_items' => 'All Campuses',
-      'singular_name' => 'Campus'
-    ),
-    'menu_icon' => 'dashicons-location-alt'
-  ));
 }
 
 add_action('init', 'university_post_types');
-
-// http://amazingcollege.local
