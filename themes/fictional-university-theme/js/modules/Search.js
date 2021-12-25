@@ -72,7 +72,8 @@ class Search {
           .map(
             (post) =>
               `<li>
-            <a href="${post.link}">${post.title.rendered}</a>
+            <a href="${post.link}">${post.title.rendered} </a>
+            ${post.type === 'post' ? `by ${post.authorName}` : ''}
           </li>`
           )
           .join('')}
